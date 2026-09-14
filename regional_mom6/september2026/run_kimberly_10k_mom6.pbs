@@ -1,0 +1,52 @@
+#!/bin/bash
+# ---------------------------------------------------------------------------
+# PBS batch job: run kimberly_10k_reanalysis_forced_sep11.ipynb non-interactively
+# on Gadi, using the same conda/analysis3-26.06 environment shown as the
+# notebook's kernel.
+#
+# Submit from a Gadi login node (or a Terminal opened inside your ARE
+# JupyterLab session — File > New > Terminal) with:
+#     qsub run_kimberly_10k_mom6.pbs
+#
+# ncpus/mem below are sized to match the LIVE Dask LocalCluster reported by
+# the currently-open notebook's own `client = Client()` cell: 7 workers x
+# 4 threads = 28 total threads, ~125.19 GiB total memory. That's well
+# within the 'normal' queue (max 190GB/48cpu node), so this runs as a
+# sub-node normal-queue job rather than hugemem. Bump these back up (and
+# switch -q to hugemem) if a fuller run needs more headroom than your
+# interactive ARE session currently has.
+# ---------------------------------------------------------------------------
+
+#PBS -N kimberly_10k_mom6
+#PBS -P nm03
+#PBS -q normal
+#PBS -l ncpus=28
+#PBS -l mem=128GB
+#PBS -l jobfs=400GB
+#PBS -l walltime=04:00:00
+#PBS -l storage=gdata/nm03+gdata/ik11+gdata/xp65+scratch/nm03
+#PBS -l wd
+#PBS -j oe
+#PBS -o kimberly_10k_mom6.log
+
+set -euo pipefail
+
+# --- Environment -----------------------------------------------------------
+# Matches the notebook's kernel: "Python [conda env:analysis3-26.06]"
+module use /g/data/xp65/public/modules
+module load conda/analysis3-26.06
+
+# --- Run the notebook non-interactively -------------------------------------
+# papermill executes the notebook top-to-bottom and writes a fully-populated
+# output notebook (with figures/results) you can open afterwards in JupyterLab.
+NOTEBOOK_IN="kimberly_10k_reanalysis_forced_sep11.ipynb"
+NOTEBOOK_OUT="kimberly_10k_reanalysis_forced_sep11_output.ipynb"
+
+if command -v papermill >/dev/null 2>&1; then
+    papermill "$NOTEBOOK_IN" "$NOTEBOOK_OUT" --log-output
+else
+    # Fallback if papermill isn't on PATH in this environment
+    jupyter nbconvert --to notebook --execute --inplace \
+        --ExecutePreprocessor.timeout=-1 \
+        "$NOTEBOOK_IN"
+fi
