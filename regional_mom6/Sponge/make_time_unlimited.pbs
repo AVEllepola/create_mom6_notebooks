@@ -1,0 +1,52 @@
+#!/bin/bash
+#PBS -N time_unlimited
+#PBS -P nm03
+#PBS -q normalbw
+#PBS -l ncpus=28
+#PBS -l mem=128GB
+#PBS -l walltime=12:00:00
+#PBS -l storage=gdata/nm03+scratch/nm03+gdata/xp65
+#PBS -l wd
+#PBS -j oe
+
+set -euo pipefail
+
+# ---- edit these ----------------------------------------------------------
+INDIR=/scratch/nm03/ae7501/mom6_input_directories/kimberly_1k_sponge_160926/
+OUTDIR=/scratch/nm03/ae7501/mom6_input_directories/kimberly_1k_sponge_160926/rec_out  # new files are written here
+TRACERS=ic_processed_291216_020118_tracers.nc
+UV=ic_processed_291216_020118_uv.nc
+WORKERS=13  # readers per file (2 files x (13 readers + 1 writer) = 28 CPUs)
+SCRIPT=/home/130/ae7501/ae7501_a/create_mom6_notebooks/regional_mom6/Sponge/04_make_time_unlimited.py
+# --------------------------------------------------------------------------
+
+# Python with netCDF4 (the xp65 conda environment has it).
+# Alternative: module load python3, then pip install --user netCDF4
+module use /g/data/xp65/public/modules
+module load conda/analysis3
+
+# Avoid HDF5 file-locking problems with several readers on a shared filesystem
+export HDF5_USE_FILE_LOCKING=FALSE
+
+mkdir -p "${OUTDIR}"
+# Stripe the output directory across many storage targets so the single writer
+# per file can stream fast (only has an effect on Lustre; harmless otherwise).
+lfs setstripe -c 16 -S 16M "${OUTDIR}" || echo "lfs setstripe not applied (not Lustre?)"
+
+echo "Started: $(date)"
+df -h "${INDIR}" || true
+
+# Both files in parallel: 2 x (13 readers + 1 writer) = 28 processes
+python3 "${SCRIPT}" "${INDIR}/${TRACERS}" "${OUTDIR}/${TRACERS}" --workers ${WORKERS} \
+    > tracers_convert.log 2>&1 &
+PID_TRACERS=$!
+python3 "${SCRIPT}" "${INDIR}/${UV}" "${OUTDIR}/${UV}" --workers ${WORKERS} \
+    > uv_convert.log 2>&1 &
+PID_UV=$!
+
+STATUS=0
+wait ${PID_TRACERS} || { echo "tracers conversion FAILED"; STATUS=1; }
+wait ${PID_UV} || { echo "uv conversion FAILED"; STATUS=1; }
+
+echo "Finished: $(date) (status ${STATUS})"
+exit ${STATUS}

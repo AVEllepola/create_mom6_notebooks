@@ -1,0 +1,64 @@
+#!/bin/bash
+#PBS -N uv_hpoints
+#PBS -P nm03
+#PBS -q normalbw
+#PBS -l ncpus=28
+#PBS -l mem=128GB
+#PBS -l walltime=12:00:00
+# storage: every /g/data or /scratch project the files live in (xp65 = python env)
+#PBS -l storage=gdata/nm03+scratch/nm03+gdata/xp65
+#PBS -l wd
+#PBS -j oe
+
+# Builds a NEW UV file with u and v on the cell-centre (h) grid, as the MOM6
+# ALE sponge expects. The input file is never modified.
+#
+#   qsub uv_to_hpoints.pbs                          -> full run
+#   qsub -v MAX_STEPS=2 uv_to_hpoints.pbs           -> timing test on the first 2 time steps
+#                                                     (output is NOT a full copy)
+
+set -eo pipefail
+
+# ---- edit these ----------------------------------------------------------
+DIR=/scratch/nm03/ae7501/mom6_input_directories/kimberly_1k_sponge_160926/rec_out
+TRACERS=${DIR}/ic_processed_291216_020118_tracers.nc
+UV_IN=${DIR}/ic_processed_291216_020118_uv.nc
+UV_OUT=${DIR}/ic_processed_291216_020118_uv_hgrid.nc
+SPONGE_DIR=/home/130/ae7501/ae7501_a/create_mom6_notebooks/regional_mom6/Sponge
+WORKERS=27                       # 27 readers + 1 writer = 28 CPUs
+# --------------------------------------------------------------------------
+
+MAX_STEPS=${MAX_STEPS:-}
+
+set +u
+module use /g/data/xp65/public/modules
+module load conda/analysis3
+set -u
+
+export HDF5_USE_FILE_LOCKING=FALSE
+
+# Stripe the output folder so the single writer can stream fast (Lustre only; harmless otherwise)
+lfs setstripe -c 16 -S 16M "${DIR}" 2>/dev/null || true
+
+echo "Started: $(date)"
+ls -l "${UV_IN}"
+df -h "${DIR}" || true
+
+EXTRA=""
+if [ -n "${MAX_STEPS}" ]; then
+    EXTRA="--max-steps ${MAX_STEPS}"
+    UV_OUT="${UV_OUT%.nc}_test.nc"
+    echo "TIMING TEST: first ${MAX_STEPS} time steps only -> ${UV_OUT}"
+fi
+
+python3 "${SPONGE_DIR}/uv_to_hpoints.py" "${UV_IN}" "${UV_OUT}" --workers ${WORKERS} ${EXTRA}
+
+# Grid consistency check of tracers vs new UV file (full run only)
+if [ -z "${MAX_STEPS}" ]; then
+    echo
+    echo "===== grid check: tracers vs new uv ====="
+    # --check-only is read-only: neither file is modified
+    python3 "${SPONGE_DIR}/fix_dimensions_like_gfdl.py" --check-only "${TRACERS}" "${UV_OUT}"
+fi
+
+echo "Finished: $(date)"

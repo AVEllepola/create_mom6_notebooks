@@ -1,0 +1,53 @@
+#!/bin/bash
+#PBS -N process_days
+#PBS -P nm03
+#PBS -q normalbw
+#PBS -l ncpus=28
+#PBS -l mem=252GB
+#PBS -l walltime=01:00:00
+#PBS -l storage=gdata/nm03+gdata/ik11+gdata/xp65
+#PBS -l wd
+#PBS -j oe
+#PBS -k oe
+#PBS -r y
+
+# This is submitted as a PBS job ARRAY, but deliberately has no #PBS -J
+# directive of its own -- Gadi's PBS server enforces a low max array size
+# (submitting the full -J 0-369 range in one go failed with "qsub: Array
+# job exceeds server or queue size limit"), so submit_all.sh submits this
+# same script repeatedly, each time with a small -J range (10 subjobs) on
+# the qsub command line, e.g.:
+#   qsub -J 0-9   process_days.pbs
+#   qsub -J 10-19 process_days.pbs
+#   ...
+# -r y is still required for every one of those submissions -- Gadi
+# appends a site-wide "-r n" (non-rerunnable) default to every job, which
+# PBS Pro refuses to combine with -J at all, rerunnable or not.
+#
+# Every subjob writes its OWN log below via plain bash redirection
+# (`exec > ... 2>&1`), naming the file with $PBS_ARRAY_INDEX -- a real
+# PBS environment variable, guaranteed to be set. An earlier version of
+# this script instead tried `#PBS -o process_days^array_index^.log`,
+# asking PBS itself to substitute the array index into the output
+# filename -- but that token's support couldn't be confirmed against
+# PBS Professional's actual documentation, and it matches exactly the
+# symptom of no log file ever appearing. Redirecting with plain bash here
+# removes that uncertainty entirely; #PBS -j oe/-k oe are left in place
+# as a harmless fallback (PBS's own default per-subjob output file will
+# just end up empty, since everything below goes to our file instead).
+exec > "process_days_${PBS_ARRAY_INDEX}.log" 2>&1
+
+set -e
+set -o pipefail
+set -x
+trap 'echo "*** FAILED at line $LINENO (exit code $?) ***" >&2' ERR
+
+module use /g/data/xp65/public/modules
+module load conda/analysis3-26.09
+
+echo "Job $PBS_JOBID, array index $PBS_ARRAY_INDEX starting on $(hostname) at $(date)"
+echo "Using python: $(which python3)"
+
+python3 -u 02_process_one_day.py --day-index "$PBS_ARRAY_INDEX"
+
+echo "Array task $PBS_ARRAY_INDEX finished at $(date)"

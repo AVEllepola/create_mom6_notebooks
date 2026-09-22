@@ -1,0 +1,67 @@
+#!/bin/bash
+#PBS -N fix_dims
+#PBS -P nm03
+#PBS -q normalbw
+#PBS -l ncpus=1
+#PBS -l mem=16GB
+#PBS -l walltime=01:00:00
+# storage: every /g/data or /scratch project the files live in (xp65 = python env)
+#PBS -l storage=gdata/nm03+scratch/nm03+gdata/xp65
+#PBS -l wd
+#PBS -j oe
+
+# Edits the sponge files IN PLACE (metadata only, no data values change).
+#
+#   qsub fix_dimensions_like_gfdl.pbs             -> preview, then apply
+#   qsub -v DRY_ONLY=1 fix_dimensions_like_gfdl.pbs -> preview only, changes nothing
+#   qsub -v BACKUP=1 fix_dimensions_like_gfdl.pbs   -> copy both files first (slow, ~4 TB)
+
+set -eo pipefail
+
+# ---- edit these ----------------------------------------------------------
+DIR=/scratch/nm03/ae7501/mom6_input_directories/kimberly_1k_sponge_160926/rec_out
+TRACERS=${DIR}/ic_processed_291216_020118_tracers.nc
+UV=${DIR}/ic_processed_291216_020118_uv.nc
+SCRIPT=/home/130/ae7501/ae7501_a/create_mom6_notebooks/regional_mom6/Sponge/05_fix_dimensions_like_gfdl.py
+# --------------------------------------------------------------------------
+
+DRY_ONLY=${DRY_ONLY:-0}
+BACKUP=${BACKUP:-0}
+
+# Python with netCDF4 (the xp65 conda environment has it).
+# Alternative: module load python3, then pip install --user netCDF4
+set +u
+module use /g/data/xp65/public/modules
+module load conda/analysis3
+set -u
+
+# Avoid HDF5 file-locking problems on the shared filesystem
+export HDF5_USE_FILE_LOCKING=FALSE
+
+echo "Started: $(date)"
+ls -l "${TRACERS}" "${UV}"
+
+echo
+echo "===== PREVIEW (dry run) ====="
+python3 "${SCRIPT}" "${TRACERS}" "${UV}" --dry-run
+
+if [ "${DRY_ONLY}" = "1" ]; then
+    echo
+    echo "DRY_ONLY=1 -> stopping here, nothing was changed."
+    echo "Finished: $(date)"
+    exit 0
+fi
+
+if [ "${BACKUP}" = "1" ]; then
+    echo
+    echo "===== BACKUP ====="
+    cp -v --no-clobber "${TRACERS}" "${TRACERS%.nc}_backup.nc"
+    cp -v --no-clobber "${UV}" "${UV%.nc}_backup.nc"
+fi
+
+echo
+echo "===== APPLYING ====="
+python3 "${SCRIPT}" "${TRACERS}" "${UV}"
+
+echo
+echo "Finished: $(date)"
