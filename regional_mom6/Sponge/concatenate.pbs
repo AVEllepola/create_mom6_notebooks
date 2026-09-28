@@ -1,4 +1,4 @@
-#!/bin/bash
+what does #!/bin/bash
 #PBS -N concat_statefiles
 #PBS -P nm03
 #PBS -q normalbw

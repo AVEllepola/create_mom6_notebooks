@@ -1,0 +1,104 @@
++ trap 'echo "*** FAILED at line $LINENO (exit code $?) ***" >&2' ERR
++ module use /g/data/xp65/public/modules
++ unset _mlshdbg
++ '[' 0 = 1 ']'
++ unset _mlre _mlIFS
++ '[' -n x ']'
++ _mlIFS=' 	
+'
++ IFS=' '
++ '[' -n '' ']'
+++ /usr/bin/tclsh /opt/Modules/v4.3.0/libexec/modulecmd.tcl bash use /g/data/xp65/public/modules
++ eval 'MODULEPATH_modshare=/etc/scl/modulefiles:1:/opt/Modules/modulefiles:1:/opt/Modules/v4.3.0/modulefiles:1:/g/data/xp65/public/modules:2:/apps/Modules/modulefiles:1;' export 'MODULEPATH_modshare;
+MODULEPATH=/g/data/xp65/public/modules:/etc/scl/modulefiles:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles;' export 'MODULEPATH;
+test' '0;'
+++ MODULEPATH_modshare=/etc/scl/modulefiles:1:/opt/Modules/modulefiles:1:/opt/Modules/v4.3.0/modulefiles:1:/g/data/xp65/public/modules:2:/apps/Modules/modulefiles:1
+++ export MODULEPATH_modshare
+++ MODULEPATH=/g/data/xp65/public/modules:/etc/scl/modulefiles:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles
+++ export MODULEPATH
+++ test 0
++ _mlstatus=0
++ '[' -n x ']'
++ IFS=' 	
+'
++ unset _mlre _mlv _mlrv _mlIFS
++ '[' -n '' ']'
++ unset _mlshdbg
++ return 0
++ module load conda/analysis3-26.09
++ unset _mlshdbg
++ '[' 0 = 1 ']'
++ unset _mlre _mlIFS
++ '[' -n x ']'
++ _mlIFS=' 	
+'
++ IFS=' '
++ '[' -n '' ']'
+++ /usr/bin/tclsh /opt/Modules/v4.3.0/libexec/modulecmd.tcl bash load conda/analysis3-26.09
++ eval
++ _mlstatus=0
++ '[' -n x ']'
++ IFS=' 	
+'
++ unset _mlre _mlv _mlrv _mlIFS
++ '[' -n '' ']'
++ unset _mlshdbg
++ return 0
+++ hostname
+++ date
++ echo 'Job 179827330[1].gadi-pbs, array index 1 starting on gadi-cpu-bdw-0604.gadi.nci.org.au at Fri Sep 25 08:53:50 AEST 2026'
+Job 179827330[1].gadi-pbs, array index 1 starting on gadi-cpu-bdw-0604.gadi.nci.org.au at Fri Sep 25 08:53:50 AEST 2026
+++ which python3
+++ alias
+++ eval declare -f
++++ declare -f
+++ /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot python3
++ echo 'Using python: /g/data/xp65/public/apps/med_conda_scripts/analysis3-26.09.d/bin/python3'
+Using python: /g/data/xp65/public/apps/med_conda_scripts/analysis3-26.09.d/bin/python3
++ python3 -u 02_process_one_day.py --day-index 1
+Using regional_mom6 from: /g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/regional_mom6/__init__.py
+=== Day 1: 20180102 (pid 3117483) ===
+Warning: Minimum depth of 5m is less than the depth of the third interface (11.26761641119201m)!
+This means that some areas may only have one or two layers between the surface and sea floor. 
+For increased stability, consider increasing the minimum depth, or adjusting the vertical coordinate to add more layers near the surface.
+Traceback (most recent call last):
+  File "/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/core/dataset.py", line 1237, in _construct_dataarray
+    variable = self._variables[name]
+               ~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'zos'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/core/dataset.py", line 1344, in __getitem__
+    return self._construct_dataarray(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/core/dataset.py", line 1239, in _construct_dataarray
+    _, name, variable = _get_virtual_variable(self._variables, name, self.sizes)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/core/dataset_utils.py", line 79, in _get_virtual_variable
+    raise KeyError(key)
+KeyError: 'zos'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/regional_mom6/regional_mom6.py", line 1043, in setup_initial_condition
+    ic_raw_eta = ic_raw[varnames["eta"]]
+                 ~~~~~~^^^^^^^^^^^^^^^^^
+  File "/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/core/dataset.py", line 1357, in __getitem__
+    raise KeyError(message) from e
+KeyError: "No variable named 'zos'. Variables on the dataset include ['so', 'thetao', 'uo', 'vo', 'depth', 'latitude', 'longitude']"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/130/ae7501/ae7501_a/create_mom6_notebooks/regional_mom6/Sponge/02_process_one_day.py", line 139, in <module>
+    main()
+  File "/home/130/ae7501/ae7501_a/create_mom6_notebooks/regional_mom6/Sponge/02_process_one_day.py", line 113, in main
+    expt.setup_initial_condition(
+  File "/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/regional_mom6/regional_mom6.py", line 1045, in setup_initial_condition
+    raise ValueError(
+ValueError: Error in reading in initial condition tracers. Terminating!
+++ echo '*** FAILED at line 51 (exit code 1) ***'
+*** FAILED at line 51 (exit code 1) ***

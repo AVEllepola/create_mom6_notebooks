@@ -1,0 +1,19 @@
+#!/bin/bash
+#PBS -N rmom6_resubmit
+#PBS -P nm03
+#PBS -q normalbw
+#PBS -l ncpus=1
+#PBS -l mem=8GB
+#PBS -l walltime=00:30:00
+#PBS -l storage=gdata/nm03+gdata/xp65
+#PBS -l wd
+#PBS -j oe
+#PBS -o resubmit.log
+
+# Tiny job that runs the next round of submit_all.sh. Submitted by
+# submit_all.sh itself -- you don't submit this by hand.
+
+module use /g/data/xp65/public/modules
+module load conda/analysis3-26.09
+
+./submit_all.sh

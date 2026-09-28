@@ -1,0 +1,59 @@
++ trap 'echo "*** FAILED at line $LINENO (exit code $?) ***" >&2' ERR
++ module use /g/data/xp65/public/modules
++ unset _mlshdbg
++ '[' 0 = 1 ']'
++ unset _mlre _mlIFS
++ '[' -n x ']'
++ _mlIFS=' 	
+'
++ IFS=' '
++ '[' -n '' ']'
+++ /usr/bin/tclsh /opt/Modules/v4.3.0/libexec/modulecmd.tcl bash use /g/data/xp65/public/modules
++ eval 'MODULEPATH_modshare=/etc/scl/modulefiles:1:/opt/Modules/modulefiles:1:/opt/Modules/v4.3.0/modulefiles:1:/g/data/xp65/public/modules:2:/apps/Modules/modulefiles:1;' export 'MODULEPATH_modshare;
+MODULEPATH=/g/data/xp65/public/modules:/etc/scl/modulefiles:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles;' export 'MODULEPATH;
+test' '0;'
+++ MODULEPATH_modshare=/etc/scl/modulefiles:1:/opt/Modules/modulefiles:1:/opt/Modules/v4.3.0/modulefiles:1:/g/data/xp65/public/modules:2:/apps/Modules/modulefiles:1
+++ export MODULEPATH_modshare
+++ MODULEPATH=/g/data/xp65/public/modules:/etc/scl/modulefiles:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles
+++ export MODULEPATH
+++ test 0
++ _mlstatus=0
++ '[' -n x ']'
++ IFS=' 	
+'
++ unset _mlre _mlv _mlrv _mlIFS
++ '[' -n '' ']'
++ unset _mlshdbg
++ return 0
++ module load conda/analysis3-26.09
++ unset _mlshdbg
++ '[' 0 = 1 ']'
++ unset _mlre _mlIFS
++ '[' -n x ']'
++ _mlIFS=' 	
+'
++ IFS=' '
++ '[' -n '' ']'
+++ /usr/bin/tclsh /opt/Modules/v4.3.0/libexec/modulecmd.tcl bash load conda/analysis3-26.09
++ eval
++ _mlstatus=0
++ '[' -n x ']'
++ IFS=' 	
+'
++ unset _mlre _mlv _mlrv _mlIFS
++ '[' -n '' ']'
++ unset _mlshdbg
++ return 0
++ module use /g/data/vk83/modules
++ unset _mlshdbg
++ '[' 0 = 1 ']'
++ unset _mlre _mlIFS
++ '[' -n x ']'
++ _mlIFS=' 	
+'
++ IFS=' '
++ '[' -n '' ']'
+++ /usr/bin/tclsh /opt/Modules/v4.3.0/libexec/modulecmd.tcl bash use /g/data/vk83/modules
+ERROR: Directory '/g/data/vk83/modules' not found
++ eval test 0 = '1;'
+++ test 0 = 1

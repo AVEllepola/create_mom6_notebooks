@@ -1,0 +1,559 @@
+
+===== submit_all.sh round at Sat Sep 26 08:36:43 AEST 2026 (job interactive) =====
+732 of 732 days still to process; 2 final file(s) missing.
+Submitted days 0-9: 179895199[].gadi-pbs
+Submitted days 10-19: 179895200[].gadi-pbs
+Submitted days 20-29: 179895201[].gadi-pbs
+Submitted days 30-39: 179895202[].gadi-pbs
+Submitted days 40-49: 179895203[].gadi-pbs
+Submitted days 50-59: 179895204[].gadi-pbs
+Submitted days 60-69: 179895205[].gadi-pbs
+Submitted days 70-79: 179895206[].gadi-pbs
+Submitted days 80-89: 179895207[].gadi-pbs
+Submitted days 90-99: 179895208[].gadi-pbs
+Submitted days 100-109: 179895209[].gadi-pbs
+Submitted days 110-119: 179895210[].gadi-pbs
+Submitted days 120-129: 179895211[].gadi-pbs
+Submitted days 130-139: 179895212[].gadi-pbs
+Submitted days 140-149: 179895213[].gadi-pbs
+Submitted days 150-159: 179895214[].gadi-pbs
+Submitted days 160-169: 179895215[].gadi-pbs
+Submitted days 170-179: 179895216[].gadi-pbs
+Submitted days 180-189: 179895217[].gadi-pbs
+Submitted days 190-199: 179895218[].gadi-pbs
+54 more batch(es) held for later rounds.
+Next round (179895219.gadi-pbs) runs when this round's 20 job(s) end.
+
+Track progress with:
+  qstat -u $USER                            # all jobs
+  qstat -t <a_batch_job_id>                  # subjobs within one batch
+  python3 01_list_missing_days.py --count    # days still to do
+  tail -f .pipeline_state/history.log             # what each round did
+
+===== submit_all.sh round at Sat Sep 26 09:10:21 AEST 2026 (job 179895219.gadi-pbs) =====
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14fb38c90bf0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14fb3853bf80>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14fb384146e0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14fb3889a120>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14fb3853bfe0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14fb561dc620>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14fb37d2a000>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14ede3dc13a0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14ede3a424b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14ede35c4860>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14ede36ecb00>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14ede3a1e600>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14ede3a43a40>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14ede2ef4260>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+532 of 732 days still to process; 2 final file(s) missing.
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1463c2d44da0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1463baae03b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1463ba8e4830>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1463bacb24b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1463baae1c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1463baae1eb0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1463ba1f2600>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+Submitted days 200-209: 179896414[].gadi-pbs
+Submitted days 210-219: 179896415[].gadi-pbs
+Submitted days 220-229: 179896416[].gadi-pbs
+Submitted days 230-239: 179896417[].gadi-pbs
+Submitted days 240-249: 179896418[].gadi-pbs
+Submitted days 250-259: 179896419[].gadi-pbs
+Submitted days 260-269: 179896420[].gadi-pbs
+Submitted days 270-279: 179896421[].gadi-pbs
+Submitted days 280-289: 179896422[].gadi-pbs
+Submitted days 290-299: 179896423[].gadi-pbs
+Submitted days 300-309: 179896424[].gadi-pbs
+Submitted days 310-319: 179896425[].gadi-pbs
+Submitted days 320-329: 179896426[].gadi-pbs
+Submitted days 330-339: 179896427[].gadi-pbs
+Submitted days 340-349: 179896428[].gadi-pbs
+Submitted days 350-359: 179896429[].gadi-pbs
+Submitted days 360-369: 179896430[].gadi-pbs
+Submitted days 370-379: 179896431[].gadi-pbs
+Submitted days 380-389: 179896433[].gadi-pbs
+Submitted days 390-399: 179896434[].gadi-pbs
+34 more batch(es) held for later rounds.
+Next round (179896435.gadi-pbs) runs when this round's 20 job(s) end.
+
+Track progress with:
+  qstat -u $USER                            # all jobs
+  qstat -t <a_batch_job_id>                  # subjobs within one batch
+  python3 01_list_missing_days.py --count    # days still to do
+  tail -f .pipeline_state/history.log             # what each round did
+
+===== submit_all.sh round at Sat Sep 26 09:47:04 AEST 2026 (job 179896435.gadi-pbs) =====
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14765f55bc50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1476584c89e0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14765816c800>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x147658338410>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1476584cb9b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1476589841d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x147657a758e0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x148324cb98e0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x148324cd6000>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x148324840bc0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1483249705f0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14832496bfb0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x148324cd65a0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x148323f887a0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+332 of 732 days still to process; 2 final file(s) missing.
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1496e1160e30>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1496e1091e20>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1496e10d0890>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1496e11f67b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1496e1160e30>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1496e1093740>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1496e07de120>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+Submitted days 400-409: 179897663[].gadi-pbs
+Submitted days 410-419: 179897664[].gadi-pbs
+Submitted days 420-429: 179897665[].gadi-pbs
+Submitted days 430-439: 179897666[].gadi-pbs
+Submitted days 440-449: 179897667[].gadi-pbs
+Submitted days 450-459: 179897668[].gadi-pbs
+Submitted days 460-469: 179897669[].gadi-pbs
+Submitted days 470-479: 179897670[].gadi-pbs
+Submitted days 480-489: 179897671[].gadi-pbs
+Submitted days 490-499: 179897672[].gadi-pbs
+Submitted days 500-509: 179897673[].gadi-pbs
+Submitted days 510-519: 179897674[].gadi-pbs
+Submitted days 520-529: 179897675[].gadi-pbs
+Submitted days 530-539: 179897677[].gadi-pbs
+Submitted days 540-549: 179897678[].gadi-pbs
+Submitted days 550-559: 179897679[].gadi-pbs
+Submitted days 560-569: 179897680[].gadi-pbs
+Submitted days 570-579: 179897681[].gadi-pbs
+Submitted days 580-589: 179897682[].gadi-pbs
+Submitted days 590-599: 179897683[].gadi-pbs
+14 more batch(es) held for later rounds.
+Next round (179897684.gadi-pbs) runs when this round's 20 job(s) end.
+
+Track progress with:
+  qstat -u $USER                            # all jobs
+  qstat -t <a_batch_job_id>                  # subjobs within one batch
+  python3 01_list_missing_days.py --count    # days still to do
+  tail -f .pipeline_state/history.log             # what each round did
+
+===== submit_all.sh round at Sat Sep 26 10:23:56 AEST 2026 (job 179897684.gadi-pbs) =====
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x150252570f50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15025912bef0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x150251f643e0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1502520a0350>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15025209be60>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15025207b410>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x150251666660>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14c8a04b7dd0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14c899ac1670>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14c8990dc380>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14c899204530>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14c89956af90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14c89956be60>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x14c8989f5310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+132 of 732 days still to process; 2 final file(s) missing.
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15412c5febd0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x154125508f20>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1541253e8b00>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1541253b2090>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15412552fce0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x154125527140>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x154124afa0c0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+Submitted days 600-609: 179899679[].gadi-pbs
+Submitted days 610-619: 179899680[].gadi-pbs
+Submitted days 620-629: 179899681[].gadi-pbs
+Submitted days 630-639: 179899682[].gadi-pbs
+Submitted days 640-649: 179899683[].gadi-pbs
+Submitted days 650-659: 179899684[].gadi-pbs
+Submitted days 660-669: 179899685[].gadi-pbs
+Submitted days 670-679: 179899686[].gadi-pbs
+Submitted days 680-689: 179899687[].gadi-pbs
+Submitted days 690-699: 179899688[].gadi-pbs
+Submitted days 700-709: 179899690[].gadi-pbs
+Submitted days 710-719: 179899691[].gadi-pbs
+Submitted days 720-729: 179899693[].gadi-pbs
+Submitted days 730-731: 179899694[].gadi-pbs
+Next round (179899695.gadi-pbs) runs when this round's 14 job(s) end.
+
+Track progress with:
+  qstat -u $USER                            # all jobs
+  qstat -t <a_batch_job_id>                  # subjobs within one batch
+  python3 01_list_missing_days.py --count    # days still to do
+  tail -f .pipeline_state/history.log             # what each round did
+
+===== submit_all.sh round at Sat Sep 26 10:57:38 AEST 2026 (job 179899695.gadi-pbs) =====
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x151d3b00aed0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x151d3acb8e00>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x151d3ab8c5f0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x151d3b0247a0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x151d3b35fe00>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x151d3ab8c890>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x151d3a4a60c0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15466dacd070>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15466d224170>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15466d020b60>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15466d4abf80>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1546742fbb30>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15466d2262d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15466c942960>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+0 of 732 days still to process; 2 final file(s) missing.
+All days done -- concatenation job: 179900961.gadi-pbs
+Next round (179900962.gadi-pbs) runs when this round's 1 job(s) end.
+
+Track progress with:
+  qstat -u $USER                            # all jobs
+  qstat -t <a_batch_job_id>                  # subjobs within one batch
+  python3 01_list_missing_days.py --count    # days still to do
+  tail -f .pipeline_state/history.log             # what each round did
+
+===== submit_all.sh round at Sat Sep 26 19:12:52 AEST 2026 (job 179900962.gadi-pbs) =====
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x148f9ce29310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x148f95fb9e20>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x148f95c14590>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x148f95d3c7a0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x148f95d3bda0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x148f95fdc500>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x148f95550680>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x145d72bfccb0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x145d6bb764b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x145d6b808950>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x145d6bb98590>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x145d6bb74aa0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x145d6bb767b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x145d6b140440>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+0 of 732 days still to process; 1 final file(s) missing.
+All days done -- concatenation job: 179918662.gadi-pbs
+Next round (179918663.gadi-pbs) runs when this round's 1 job(s) end.
+
+Track progress with:
+  qstat -u $USER                            # all jobs
+  qstat -t <a_batch_job_id>                  # subjobs within one batch
+  python3 01_list_missing_days.py --count    # days still to do
+  tail -f .pipeline_state/history.log             # what each round did
+
+===== submit_all.sh round at Sat Sep 26 21:14:16 AEST 2026 (job interactive) =====
+0 of 732 days still to process; 1 final file(s) missing.
+All days done -- concatenation job: 179922028.gadi-pbs
+Next round (179922029.gadi-pbs) runs when this round's 1 job(s) end.
+
+Track progress with:
+  qstat -u $USER                            # all jobs
+  qstat -t <a_batch_job_id>                  # subjobs within one batch
+  python3 01_list_missing_days.py --count    # days still to do
+  tail -f .pipeline_state/history.log             # what each round did
+
+===== submit_all.sh round at Sat Sep 26 21:32:09 AEST 2026 (job interactive) =====
+0 of 732 days still to process; 1 final file(s) missing.
+All days done -- concatenation job: 179922918.gadi-pbs
+Next round (179922919.gadi-pbs) runs when this round's 1 job(s) end.
+
+Track progress with:
+  qstat -u $USER                            # all jobs
+  qstat -t <a_batch_job_id>                  # subjobs within one batch
+  python3 01_list_missing_days.py --count    # days still to do
+  tail -f .pipeline_state/history.log             # what each round did
+
+===== submit_all.sh round at Sun Sep 27 03:41:15 AEST 2026 (job 179922919.gadi-pbs) =====
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:38: UserWarning: An error occurred while loading the ERDDAP data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x154e7fd837a0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:50: UserWarning: An error occurred while loading the ArgoVis data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x154e7f88b380>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:66: UserWarning: An error occurred while loading the GDAC data fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x154e7f873680>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:91: UserWarning: An error occurred while loading the ERDDAP index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x154e7f88c710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/argopy/utils/lists.py:107: UserWarning: An error occurred while loading the GDAC index fetcher, it will not be available !
+<class 'requests.exceptions.ConnectionError'>
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x154e7f88bb90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  warnings.warn(
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x154e7f873530>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x154e7ee50b90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'gmt' loading failed:
+partially initialized module 'cupy' has no attribute '_util' (most likely due to a circular import)
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'radolan' loading failed:
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/scipy/signal/_upfirdn_apply.cpython-312-x86_64-linux-gnu.so: cannot read file data: Input/output error
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'rasterio' loading failed:
+partially initialized module 'cupy' has no attribute '_util' (most likely due to a circular import)
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'xrspatial' loading failed:
+partially initialized module 'cupy' has no attribute '_util' (most likely due to a circular import)
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'argo' loading failed:
+[Errno 5] Input/output error
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+/g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/xarray/backends/plugins.py:109: RuntimeWarning: Engine 'erddapy' loading failed:
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /IrishMarineInstitute/awesome-erddap/master/erddaps.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x15183eea2b70>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+  external_backend_entrypoints = backends_dict_from_pkg(entrypoints_unique)
+0 of 732 days still to process; 1 final file(s) missing.
+All days done -- concatenation job: 179940825.gadi-pbs
+Next round (179940826.gadi-pbs) runs when this round's 1 job(s) end.
+
+Track progress with:
+  qstat -u $USER                            # all jobs
+  qstat -t <a_batch_job_id>                  # subjobs within one batch
+  python3 01_list_missing_days.py --count    # days still to do
+  tail -f .pipeline_state/history.log             # what each round did
+
+===== submit_all.sh round at Sun Sep 27 07:32:42 AEST 2026 (job 179940826.gadi-pbs) =====
+Both final files exist -- pipeline complete:
+  /g/data/nm03/ae7501/glorys_data/sponge_data/ic_processed_010118_020120_tracers.nc
+  /g/data/nm03/ae7501/glorys_data/sponge_data/ic_processed_010118_020120_uv.nc

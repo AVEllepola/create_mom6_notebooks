@@ -1,0 +1,21 @@
+ERROR: Directory '/g/data/vk83/modules' not found
+ERROR: Unable to locate a modulefile for 'payu'
+Loading conda/analysis3-26.09
+  Loading requirement: singularity
+
+===== submit_all.sh round at Sun Sep 27 07:32:42 AEST 2026 (job 179940826.gadi-pbs) =====
+Both final files exist -- pipeline complete:
+  /g/data/nm03/ae7501/glorys_data/sponge_data/ic_processed_010118_020120_tracers.nc
+  /g/data/nm03/ae7501/glorys_data/sponge_data/ic_processed_010118_020120_uv.nc
+
+======================================================================================
+                  Resource Usage on 2026-09-27 07:32:53:
+   Job Id:             179940826.gadi-pbs
+   Project:            nm03
+   Exit Status:        0
+   Service Units:      0.00
+   NCPUs Requested:    1                   CPU Time Used: 00:00:01        
+   Memory Requested:   8.0GB                 Memory Used: 116.11MB        
+   Walltime Requested: 00:30:00            Walltime Used: 00:00:07        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

@@ -5,20 +5,20 @@ Edit values here once -- 00_build_grid.py, 01_count_days.py,
 02_process_one_day.py and 03_concatenate_days.py all import this file, so
 they never drift out of sync with each other.
 """
+
+
+
 import os
 import sys
 from pathlib import Path
 
-# Dev checkouts of regional-mom6 / mom6_forge.
-sys.path.insert(0, '/g/data/nm03/ae7501/regional-mom6')
-sys.path.insert(0, '/g/data/nm03/ae7501/mom6_forge')
 
 home = "/home/130/ae7501"
-expt_name = "kimberly_1k_091126_sponge"
+expt_name = "kimberly_1k_240926_sponge"
 
 latitude_extent = [-21, -9.20]
 longitude_extent = [114.8, 129.9]
-date_range = ["2016-12-29 00:00:00", "2018-01-02 00:00:00"]
+date_range = ["2018-01-01 00:00:00", "2020-02-02 00:00:00"]
 
 # Shared dir: holds the once-built grid (hgrid.nc / vcoord.nc), the per-day
 # staging files, and the two final concatenated outputs.
@@ -29,11 +29,11 @@ fre_tools_dir = Path("/g/data/ik11/mom6_tools/tools/bin/")
 
 # Raw multi-day IC source file.
 glorys_path = Path("/g/data/nm03/ae7501/glorys_data/sponge_data_source")
-ic_source_path = glorys_path / "ic_unprocessed_291216_020118.nc"
+ic_source_path = glorys_path / "ic_unprocessed_010118_020120.nc"
 
 daily_stage_dir = input_dir / "ic_daily_tmp"
-ic_tracers_output_path = input_dir / "ic_processed_291216_020118_tracers.nc"
-ic_uv_output_path = input_dir / "ic_processed_291216_020118_uv.nc"
+ic_tracers_output_path = input_dir / "ic_processed_010118_020120_tracers.nc"
+ic_uv_output_path = input_dir / "ic_processed_010118_020120_uv.nc"
 
 ocean_varnames = {
     "time": "time",

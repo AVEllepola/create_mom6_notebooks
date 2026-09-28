@@ -1,0 +1,59 @@
++ trap 'echo "*** FAILED at line $LINENO (exit code $?) ***" >&2' ERR
++ module use /g/data/xp65/public/modules
++ unset _mlshdbg
++ '[' 0 = 1 ']'
++ unset _mlre _mlIFS
++ '[' -n x ']'
++ _mlIFS=' 	
+'
++ IFS=' '
++ '[' -n '' ']'
+++ /usr/bin/tclsh /opt/Modules/v4.3.0/libexec/modulecmd.tcl bash use /g/data/xp65/public/modules
++ eval 'MODULEPATH_modshare=/etc/scl/modulefiles:1:/opt/Modules/modulefiles:1:/opt/Modules/v4.3.0/modulefiles:1:/g/data/xp65/public/modules:2:/apps/Modules/modulefiles:1;' export 'MODULEPATH_modshare;
+MODULEPATH=/g/data/xp65/public/modules:/etc/scl/modulefiles:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles;' export 'MODULEPATH;
+test' '0;'
+++ MODULEPATH_modshare=/etc/scl/modulefiles:1:/opt/Modules/modulefiles:1:/opt/Modules/v4.3.0/modulefiles:1:/g/data/xp65/public/modules:2:/apps/Modules/modulefiles:1
+++ export MODULEPATH_modshare
+++ MODULEPATH=/g/data/xp65/public/modules:/etc/scl/modulefiles:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles
+++ export MODULEPATH
+++ test 0
++ _mlstatus=0
++ '[' -n x ']'
++ IFS=' 	
+'
++ unset _mlre _mlv _mlrv _mlIFS
++ '[' -n '' ']'
++ unset _mlshdbg
++ return 0
++ module load conda/analysis3-26.09
++ unset _mlshdbg
++ '[' 0 = 1 ']'
++ unset _mlre _mlIFS
++ '[' -n x ']'
++ _mlIFS=' 	
+'
++ IFS=' '
++ '[' -n '' ']'
+++ /usr/bin/tclsh /opt/Modules/v4.3.0/libexec/modulecmd.tcl bash load conda/analysis3-26.09
++ eval
++ _mlstatus=0
++ '[' -n x ']'
++ IFS=' 	
+'
++ unset _mlre _mlv _mlrv _mlIFS
++ '[' -n '' ']'
++ unset _mlshdbg
++ return 0
+++ hostname
+++ date
++ echo 'Job 179827379[485].gadi-pbs, array index 485 starting on gadi-cpu-bdw-0803.gadi.nci.org.au at Fri Sep 25 09:03:36 AEST 2026'
+Job 179827379[485].gadi-pbs, array index 485 starting on gadi-cpu-bdw-0803.gadi.nci.org.au at Fri Sep 25 09:03:36 AEST 2026
+++ which python3
+++ alias
+++ eval declare -f
++++ declare -f
+++ /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot python3
++ echo 'Using python: /g/data/xp65/public/apps/med_conda_scripts/analysis3-26.09.d/bin/python3'
+Using python: /g/data/xp65/public/apps/med_conda_scripts/analysis3-26.09.d/bin/python3
++ python3 -u 02_process_one_day.py --day-index 485
+Using regional_mom6 from: /g/data/xp65/public/apps/med_conda/envs/analysis3-26.09/lib/python3.12/site-packages/regional_mom6/__init__.py

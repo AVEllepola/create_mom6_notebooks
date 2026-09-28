@@ -1,0 +1,14 @@
++ trap 'echo "*** FAILED at line $LINENO (exit code $?) ***" >&2' ERR
++ module use /g/data/vk83/modules
++ unset _mlshdbg
++ '[' 0 = 1 ']'
++ unset _mlre _mlIFS
++ '[' -n x ']'
++ _mlIFS=' 	
+'
++ IFS=' '
++ '[' -n '' ']'
+++ /usr/bin/tclsh /opt/Modules/v4.3.0/libexec/modulecmd.tcl bash use /g/data/vk83/modules
+ERROR: Directory '/g/data/vk83/modules' not found
++ eval test 0 = '1;'
+++ test 0 = 1

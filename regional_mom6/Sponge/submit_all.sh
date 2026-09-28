@@ -19,6 +19,9 @@
 # count directly:
 #   module use /g/data/xp65/public/modules
 #   module load conda/analysis3-26.09
+
+#   module use /g/data/vk83/modules
+#   module load rmom6
 #
 # Usage: ./submit_all.sh
 set -e

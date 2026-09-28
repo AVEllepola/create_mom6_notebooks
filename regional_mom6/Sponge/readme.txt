@@ -10,6 +10,9 @@ creating damp state file...
 
 add the below to the override once the damp state file and the damp rate file are created.
 
+
+make changes to config.py
+
 ! === Sponge ===
 
 #override SPONGE = True
@@ -38,7 +41,14 @@ ERROR records
 
 FATAL from PE 0: NetCDF: Invalid dimension ID or name: get_unlimited_dimension_name: file:INPUT/ic_processed_291216_020118_tracers.nc . time dimension has to be unlimited in state files.
 
+use make_time_unlimited.pbs
+
+
 FATAL from PE    34: file/field INPUT/rec_out/ic_processed_291216_020118_tracers.nc/temp couldnt recognize axis atts in time_interp_external - axis attribute needs to be added. reffering to the gfdl code file creatinon,
+
+use fix_dimentions_like_gfdl.pbs
 
 
 FATAL from PE     1: time_interp_ext, file/field INPUT/rec_out/ic_processed_291216_020118_uv.nc/u x dim doesnt match model -- the uv needs to be on hpoints.
+
+use uv_to_hpoints.pbs
